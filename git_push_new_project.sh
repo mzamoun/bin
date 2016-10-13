@@ -11,7 +11,7 @@ if [ ! -e $f ]; then echo "$Usage"; exit 1; fi
 if [ $f != "README.md" ]; then echo "$Usage"; exit 1; fi
 
 git init
-files=$(ls -a | egrep -v target )
+files=$(ls -a | awk 'BEGIN {s=""} { if (NR>2 && $1 != ".git" && $1 != "target") {s = s " " $1;}  } END {print s}')
 echo " files to add :
   $files
 
