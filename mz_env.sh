@@ -3,7 +3,7 @@ export PROJ=d:/proj
 
 alias ll='ls -al'
 alias lt='ls -alrt'
-alias ..='cd ..'
+alias ..='cd ..; lt'
 
 export DIR_PGM=/cygdrive/d/pgm
 export JAVA_HOME=$DIR_PGM/java/jdk1.8.0_102
