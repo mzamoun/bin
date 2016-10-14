@@ -1,14 +1,11 @@
 SITE00=https://github.com/mzamoun
 
 Usage="
-	$0 README.md 
+	You must have README.md 
 "
-if (($#<1)); then echo "$Usage"; exit 1; fi
-
-f=$1
+f=README.md
 
 if [ ! -e $f ]; then echo "$Usage"; exit 1; fi
-if [ $f != "README.md" ]; then echo "$Usage"; exit 1; fi
 
 git init
 files=$(ls -a | awk 'BEGIN {s=""} { if (NR>2 && $1 != ".git" && $1 != "target") {s = s " " $1;}  } END {print s}')

@@ -1,17 +1,21 @@
-export WS=d:/workspace
-export PROJ=d:/proj
+export DIR_DATA=/cygdrive/d
+export DIR_DATA=/home/mzamoun/Documents
+
+export WS=$DIR_DATA/ws
+export PROJ=$DIR_DATA/proj
+export APPS=$DIR_DATA/apps
 
 alias ll='ls -al'
 alias lt='ls -alrt'
 alias ..='cd ..; lt'
 
-export DIR_PGM=/cygdrive/d/pgm
-export JAVA_HOME=$DIR_PGM/java/jdk1.8.0_102
-export ECLIPSE=$DIR_PGM/eclipse-jee-neon-1
-export MAVEN_HOME=$DIR_PGM/apache-maven-3.3.9
+export JAVA_HOME=$APPS/jdk1.8.0_102
+export ECLIPSE=$APPS/eclipse-jee-neon-1/eclipse
+export MAVEN_HOME=$APPS/apache-maven-3.3.9
 export M2_HOME=$MAVEN_HOME
-export NPP=$DIR_PGM/npp
+export NPP=$APPS/npp
+export REDIS=$APPS/redis-3.2.4
 
-export PATH=$NPP:$JAVA_HOME/bin:$MAVEN_HOME/bin:$ECLIPSE:~/bin:$PATH
+export PATH=$REDIS/src:$NPP:$JAVA_HOME/bin:$MAVEN_HOME/bin:$ECLIPSE:~/bin:$PATH
 
 
