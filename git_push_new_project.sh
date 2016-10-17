@@ -8,13 +8,13 @@ f=README.md
 if [ ! -e $f ]; then echo "$Usage"; exit 1; fi
 
 git init
-files=$(ls -a | awk 'BEGIN {s=""} { if (NR>2 && $1 != ".git" && $1 != "target") {s = s " " $1;}  } END {print s}')
+files=$(ls -a | awk 'BEGIN {s=""} { if (NR>2 && $1 != ".git" && $1 != "target" && $1 != ".settings" ) {s = s " " $1;}  } END {print s}')
 echo " files to add :
   $files
 
-? Enter=OK; n=taper files" ; read zz;
+? Enter=OK; Or taper list of files" ; read zz;
 
-if [ "$zz" == "n" ]; then echo -n "files= "; fi; read files
+if [ "$zz" != "" ]; then files=$zz; fi;
 
 git add $files 
 git commit -m "first commit"
