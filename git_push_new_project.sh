@@ -1,4 +1,6 @@
-SITE00=https://github.com/mzamoun
+. ~/bin/mz_env.sh
+
+if [ "$URL_GIT_BASE" == "" ]; then echo " URL_GIT_BASE est vide; you must source your mz_env.sh before."; exit 1; fi
 
 Usage="
 	You must have README.md 
@@ -21,7 +23,7 @@ git commit -m "first commit"
 
 proj=$(basename $PWD)
 
-git remote add origin $SITE00/$proj.git
+git remote add origin $URL_GIT_BASE/$proj.git
 git push -u origin master
 
 

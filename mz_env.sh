@@ -1,5 +1,6 @@
-export DIR_DATA=/cygdrive/d
+#export DIR_DATA=/cygdrive/d
 export DIR_DATA=/home/mzamoun/Documents
+export URL_GIT_BASE=https://github.com/mzamoun
 
 export WS=$DIR_DATA/ws
 export PROJ=$DIR_DATA/proj
