@@ -14,9 +14,10 @@ export JAVA_HOME=$APPS/jdk1.8.0_102
 export ECLIPSE=$APPS/eclipse-jee-neon-1/eclipse
 export MAVEN_HOME=$APPS/apache-maven-3.3.9
 export M2_HOME=$MAVEN_HOME
+export TOMCAT_HOME=$APPS/apache-tomcat-8.5.6
 export NPP=$APPS/npp
 export REDIS=$APPS/redis-3.2.4
 
-export PATH=$REDIS/src:$NPP:$JAVA_HOME/bin:$MAVEN_HOME/bin:$ECLIPSE:~/bin:$PATH
+export PATH=$TOMCAT_HOME/bin:$REDIS/src:$NPP:$JAVA_HOME/bin:$MAVEN_HOME/bin:$ECLIPSE:~/bin:$PATH
 
 
